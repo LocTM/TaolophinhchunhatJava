@@ -1,16 +1,19 @@
+import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập chiều rộng: ");
+        double width = scanner.nextDouble();
+        System.out.println("Nhập chiều dài: ");
+        double height = scanner.nextDouble();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Rectangle rectangle = new Rectangle(width,height);
+        System.out.println("Your Rectangle \n"+ rectangle.display());
+        System.out.println("Perimeter of the Rectangle: "+ rectangle.getPerimeter());
+        System.out.println("Area of the Rectangle: "+ rectangle.getArea());
+
     }
 }
